@@ -16,7 +16,7 @@ System.register('johnhearfield/auth-google/components/GoogleSettingsModal', ['fl
 
         function GoogleSettingsModal() {
           babelHelpers.classCallCheck(this, GoogleSettingsModal);
-          return babelHelpers.possibleConstructorReturn(this, Object.getPrototypeOf(GoogleSettingsModal).apply(this, arguments));
+          return babelHelpers.possibleConstructorReturn(this, (GoogleSettingsModal.__proto__ || Object.getPrototypeOf(GoogleSettingsModal)).apply(this, arguments));
         }
 
         babelHelpers.createClass(GoogleSettingsModal, [{

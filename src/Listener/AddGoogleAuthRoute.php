@@ -20,6 +20,6 @@ class AddGoogleAuthRoute
      */
     public function configureForumRoutes(ConfigureForumRoutes $event)
     {
-        $event->get('/auth/google', 'auth.google', 'JohnHearfield\Auth\Google\GoogleAuthController');
+        $event->get('/auth/gitlab', 'auth.google', 'JohnHearfield\Auth\Google\GoogleAuthController');
     }
 }

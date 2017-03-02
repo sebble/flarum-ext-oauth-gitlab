@@ -5,7 +5,8 @@ namespace JohnHearfield\Auth\Google;
 use Flarum\Forum\AuthenticationResponseFactory;
 use Flarum\Forum\Controller\AbstractOAuth2Controller;
 use Flarum\Settings\SettingsRepositoryInterface;
-use League\OAuth2\Client\Provider\Google;
+#use League\OAuth2\Client\Provider\Google;
+use Omines\OAuth2\Client\Provider\Gitlab;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 class GoogleAuthController extends AbstractOAuth2Controller
@@ -30,13 +31,13 @@ class GoogleAuthController extends AbstractOAuth2Controller
      */
     protected function getProvider($redirectUri)
     {
-        return new Google([
+        return new GitLab([
             'clientId'        => $this->settings->get('johnhearfield-oauth-google.app_id'),
             'clientSecret'    => $this->settings->get('johnhearfield-oauth-google.app_secret'),
             'redirectUri'     => $redirectUri,
-            'approvalPrompt'  => 'force',
-            'hostedDomain'    => $this->settings->get('johnhearfield-oauth-google.app_domain'),
-            'accessType'      => 'offline'
+            #'approvalPrompt'  => 'force',
+            'domain'    => $this->settings->get('johnhearfield-oauth-google.app_domain')
+            #'accessType'      => 'offline'
         ]);
     }
 
@@ -48,9 +49,10 @@ class GoogleAuthController extends AbstractOAuth2Controller
         return [
             'scope' =>
                 [
-                    'email',
-                    'profile',
-                    'https://www.googleapis.com/auth/userinfo.profile'
+                    'read_user'
+                    #'email',
+                    #'profile',
+                    #'https://www.googleapis.com/auth/userinfo.profile'
                 ]
         ];    }
 
