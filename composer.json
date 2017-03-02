@@ -1,23 +1,27 @@
 {
-    "name": "johnhearfield/flarum-ext-oauth-google",
-    "description": "Allow users to log in with Google.",
+    "name": "sebble/flarum-ext-oauth-gitlab",
+    "description": "Allow users to log in with GitLab.",
     "type": "flarum-extension",
     "keywords": ["authentication"],
     "license": "GPL-3.0+",
-    "version": "v0.1.0-beta.8.1",
+    "version": "v0.1.0-beta.8.1.1+sebble",
     "authors": [
         {
             "name": "John Hearfield",
             "email": "dev@findingjohn.xyz"
+        },
+        {
+            "name": "Sebastian Mellor",
+            "email": "sebble@sebble.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/johnhearfield/flarum-ext-oauth-google/issues",
-        "source": "https://github.com/johnhearfield/flarum-ext-oauth-google"
+        "issues": "https://github.com/sebble/flarum-ext-oauth-gitlab/issues",
+        "source": "https://github.com/sebble/flarum-ext-oauth-gitlab"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.5",
-        "league/oauth2-google": "~1.0"
+        "flarum/core": "^0.1.0-beta.6",
+        "omines/oauth2-gitlab": "~2.0"
     },
     "autoload": {
         "psr-4": {
@@ -26,10 +30,10 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Google Login",
+            "title": "GitLab Login",
             "icon": {
-                "name": "google",
-                "backgroundColor": "#D13E32",
+                "name": "gitlab",
+                "backgroundColor": "#554488",
                 "color": "#fff"
             }
         }

@@ -1,3 +1,11 @@
+> **NOTICE** Re-write for GitLab in progress
+
+# TODO
+
+- replace GitHub references with GitLab
+- replace GitHub plugin
+- clean-up PHP namespace
+
 # Flarum Google Authenticator
 Allows users to login using their Google Account.
 
